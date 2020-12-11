@@ -11,14 +11,10 @@ const NamesStyle = styled.p`
     margin-left: 40%;
  `
 
-function Names () {
-    const [pokemonName, setPokemonName] = useState("")
-    const nameArray = []
+function Type () {
 
-    const [pokedexNumber, setPokedexNumber] = useState(null)
-    const numberArray = []
 
-    const [pokemonType, setPokemonType] = useState("")
+    const [pokemonType, setPokemonType] = useState([])
     const typeArray = []
 
     useEffect ( () => {
@@ -27,19 +23,15 @@ function Names () {
              `https://pokeapi.co/api/v2/pokemon/1`
         )
         .then ( (data) => {
-            console.log(data.data.name)
-            console.log(data.data.order)
-            console.log(data.data.types[0].type.name)
+
 
 
             // for ( let i = 0; i < data.data.results.length; i++) {
-                //  nameArray.push(<p>{data.data.name}</p>)
-                //  numberArray.push(<p>{data.data.order}</p>)
+
                 //  typeArray.push(<p>{data.data.types[0].type.name}</p>)
 
             // }
-                 setPokemonName(data.data.name)
-                 setPokedexNumber(data.data.order)
+  
                  setPokemonType(data.data.types[0].type.name)
                 // console.log()
             
@@ -48,12 +40,10 @@ function Names () {
 
         return (
             // <NamesStyle>
-                <p>pokemonName</p>,
-                <p>pokedexNumber</p>,
-                <p>pokemonType</p>
+                <p>{pokemonType}</p>
         //    </NamesStyle>
         )
 
 }
 
-export default Names
+export default Type

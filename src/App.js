@@ -7,6 +7,8 @@ import './App.css';
 
 // eslint-disable-next-line
 import Names from './Names'
+import Number from './Number'
+import Type from './Type'
 
 const App = () => {
   
@@ -15,7 +17,9 @@ const App = () => {
     <div className="App">
       <h1 className="Header">Pokemon</h1>
       
-      <Names />
+      <Names />,
+      <Number />,
+      <Type />
 
     </div>
   )
