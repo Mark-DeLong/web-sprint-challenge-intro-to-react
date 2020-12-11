@@ -9,6 +9,8 @@ const NamesStyle = styled.p`
     border: 1px solid gold;
     max-width: 20%;
     margin-left: 40%;
+    background-color: black;
+    color: white;
  `
 
 function Names () {
@@ -40,9 +42,9 @@ function Names () {
     }, [])
 
         return (
-            // <NamesStyle>
-                <p>{pokemonName}</p>
-        //    </NamesStyle>
+             <NamesStyle>
+                <p>Name: {pokemonName}</p>
+             </NamesStyle>
         )
 
 }

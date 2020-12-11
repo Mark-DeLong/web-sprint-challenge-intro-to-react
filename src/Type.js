@@ -9,6 +9,8 @@ const TypeStyle = styled.p`
     border: 1px solid gold;
     max-width: 20%;
     margin-left: 40%;
+    background-color: black;
+    color: white;
  `
 
 function Type () {
@@ -39,9 +41,9 @@ function Type () {
     }, [])
 
         return (
-            // <NamesStyle>
-                <p>{pokemonType}</p>
-        //    </NamesStyle>
+            <TypeStyle>
+                <p>Type: {pokemonType}</p>
+            </TypeStyle>
         )
 
 }

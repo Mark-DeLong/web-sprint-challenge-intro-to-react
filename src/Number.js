@@ -8,12 +8,14 @@ const NumberStyle = styled.p`
     border: 1px solid gold;
     max-width: 20%;
     margin-left: 40%;
+    background-color: black;
+    color: white;
  `
 
 function Number () {
   
 
-    const [pokedexNumber, setPokedexNumber] = useState([])
+    const [pokedexNumber, setPokedexNumber] = useState("")
     const numberArray = []
 
 
@@ -40,11 +42,9 @@ function Number () {
     }, [])
 
         return (
-            // <NamesStyle>
-               
-                <p>{pokedexNumber}</p>
-             
-        //    </NamesStyle>
+            <NumberStyle>
+                <p>Pokedex Number: {pokedexNumber}</p>
+            </NumberStyle>
         )
 
 }
