@@ -1,4 +1,4 @@
-// eslint-disable-next-line
+
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
@@ -12,14 +12,10 @@ const NamesStyle = styled.p`
  `
 
 function Names () {
-    const [pokemonName, setPokemonName] = useState("")
+    const [pokemonName, setPokemonName] = useState([])
     const nameArray = []
 
-    const [pokedexNumber, setPokedexNumber] = useState(null)
-    const numberArray = []
 
-    const [pokemonType, setPokemonType] = useState("")
-    const typeArray = []
 
     useEffect ( () => {
         axios
@@ -28,19 +24,16 @@ function Names () {
         )
         .then ( (data) => {
             console.log(data.data.name)
-            console.log(data.data.order)
-            console.log(data.data.types[0].type.name)
+            
 
 
             // for ( let i = 0; i < data.data.results.length; i++) {
                 //  nameArray.push(<p>{data.data.name}</p>)
-                //  numberArray.push(<p>{data.data.order}</p>)
-                //  typeArray.push(<p>{data.data.types[0].type.name}</p>)
+                 
 
             // }
                  setPokemonName(data.data.name)
-                 setPokedexNumber(data.data.order)
-                 setPokemonType(data.data.types[0].type.name)
+                 
                 // console.log()
             
         })
@@ -48,9 +41,7 @@ function Names () {
 
         return (
             // <NamesStyle>
-                <p>pokemonName</p>,
-                <p>pokedexNumber</p>,
-                <p>pokemonType</p>
+                <p>{pokemonName}</p>
         //    </NamesStyle>
         )
 

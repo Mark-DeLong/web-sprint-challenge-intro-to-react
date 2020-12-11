@@ -1,11 +1,11 @@
-// eslint-disable-next-line
+
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
 import styled from 'styled-components'
 import axios from 'axios'
 
-const NamesStyle = styled.p`
+const TypeStyle = styled.p`
     border: 1px solid gold;
     max-width: 20%;
     margin-left: 40%;
